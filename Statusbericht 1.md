@@ -11,4 +11,4 @@ Folgende Aufgaben werden voraussichtlich bis zum nächsten Team-Meeting am 16.10
 
 Bis zum nächsten Betreuer-Treffen am 23.10 soll zudem folgendes realisiert werden
 * Erste Einarbeit in benötigte Tools
-* Ein Projektablaufplan wird erstellt. Der Umfang des Projektes soll evaluiert, working packages erstellt und eine mögliche Aufgabenteilung überlegt werden.
+* Der Umfang des Projektes soll evaluiert und eine mögliche Aufgabenteilung überlegt werden.
