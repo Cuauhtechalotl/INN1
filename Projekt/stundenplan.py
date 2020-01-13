@@ -1,7 +1,8 @@
 import subprocess
 import operator
+import csv
 # executes clingo
-p = subprocess.Popen([r'C:\Users\Cuauhtechalotl\Anaconda3\Library\bin\clingo.exe', r'plan.lp'],shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+p = subprocess.Popen([r'clingo.exe', r'plan.lp'],shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 # reads output
 output = list()
 for line in p.stdout.readlines():
@@ -34,5 +35,10 @@ for x in range (0,len(results)):
     for y in range (0,len(results[x])):
         out += results[x][y] + " "
     print(out)
+#data ouput
+with open('output.csv', mode='w',newline='') as output_file:
+    writer = csv.writer(output_file, delimiter=";",dialect='excel')
+    writer.writerow(["Slot","Day","Room","Class","Subclass","Course"])
+    writer.writerows(results)
 # results[x][i] contains x results with i Parameters, given by the executed programm
 # at date 10.12: slot, day, room, class, group, subject
