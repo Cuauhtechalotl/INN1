@@ -1,14 +1,13 @@
-
 % variables
 
-#const roomNo = 9.  		%rooms
-#const roomNoSmall = 6.		%small rooms
-#const subjNo = 20.  		%subjects
-#const classNo = 4. 		%classes
-#const small = 1.			%small room capacity (group)
-#const medium = 2.			%medium room capacity (class)
-#const slotNo = 4.			%timeslots
-#const lectorNo = 4.		%lectors
+#const roomNo = 10. 	%rooms
+#const roomNoSmall = 5.	%small rooms
+#const subjNo = 10.		%courses
+#const classNo = 8. 	%classes
+#const slotNo = 3.		%timeslots
+#const small = 1.		%small room capacity (group)
+#const medium = 2.		%medium room capacity (class)
+#const lectorNo = 4.	%lectors
 
 % instance
 
@@ -18,6 +17,10 @@ class(1..classNo).
 group(1..classNo,(a;b)).
 slot(1..slotNo,(mo;di;mi;do;fr)).
 roomSize(1..roomNoSmall,small;roomNoSmall+1..roomNo,medium).
+
+% no calculation, when slotNo*dayNo*(roomNoSmall+roomNoMedium*2) < subjects*classNo*2)
+
+:- slotNo*5*(roomNoSmall+(roomNo-roomNoSmall)*2) < subjNo*classNo*2.
 
 % encoding occupied(slot,day,room,class,group,subject)
 
