@@ -26,3 +26,9 @@ Studierende
 
 Lehrpersonal
 * darf ein gewisses Lehrkontingent nicht über- oder unterschreiten
+
+## Bedienung
+Die Datei "stundenplan.py" wird mittels "python stundenplan.py" ausgeführt.
+Diese führt "clingo.exe" als Subprogramm aus, welches wiederum die Clingo-Befehle in "plan.lp" ausführt.
+Diese drei Dateien sollen sich im selben Ordner befinden.
+Das Resultat wird anschließend in eine CSV-Datei "output.csv" geschrieben
