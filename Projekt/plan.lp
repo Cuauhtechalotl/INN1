@@ -1,13 +1,13 @@
 
 % variables
 
-#const roomNo = 3.  		%rooms
-#const roomNoSmall = 2.		%small rooms
-#const subjNo = 4.  		%subjects
+#const roomNo = 9.  		%rooms
+#const roomNoSmall = 6.		%small rooms
+#const subjNo = 20.  		%subjects
 #const classNo = 4. 		%classes
 #const small = 1.			%small room capacity (group)
 #const medium = 2.			%medium room capacity (class)
-#const slotNo = 3.			%timeslots
+#const slotNo = 4.			%timeslots
 #const lectorNo = 4.		%lectors
 
 % instance
